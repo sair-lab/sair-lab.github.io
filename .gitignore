@@ -10,4 +10,3 @@ node_modules
 vendor
 .vscode
 yarn.lock
-*.json
