@@ -15,11 +15,11 @@ hero_link_text2: See My Publication
 
 # About Me
 
-My research goal is to achieve greater autonomy and intelligence in real-time on robot systems. I am particularly interested in robot perception, vision, and machine learning. I am also engaged in delivering simple and efficient source codes.
+I am a Project Scientist with the [Robotics Institute](https://www.ri.cmu.edu/) at [Carnegie Mellon University](https://www.cmu.edu/). My research goal is to achieve human-level spatial awareness on robot systems. I am particularly interested in robot perception, vision, and machine learning.
 
-I am proud to be a member of the [Robotics Institute](https://www.ri.cmu.edu/) at [Carnegie Mellon University](https://www.cmu.edu/).
+I am also engaged in delivering simple and efficient [source code](https://github.com/wang-chen).
 
-<!-- # Highlights -->
+# Highlights
 
 {% assign posts = site.posts | where:"categories","highlights" %}
 <div class="columns is-multiline">

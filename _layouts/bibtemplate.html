@@ -9,7 +9,6 @@
 <script>
     function toggle{{entry.key | replace : '-':'' | replace : ':':''}}() {
         var x= document.getElementById('a{{entry.key}}');
-        // console.log("haha %o",typeof {{entry.key}});
         if (x.style.display === 'block') {
             x.style.display = 'none';
         } else {
@@ -25,7 +24,6 @@
 <script>
     function toggle2{{entry.key | replace : '-':'' | replace : ':':''}}() {
         var x= document.getElementById('b{{entry.key}}');
-        // console.log("haha %o",typeof {{entry.key}});
         if (x.style.display === 'block') {
             x.style.display = 'none';
         } else {
