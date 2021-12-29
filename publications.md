@@ -7,6 +7,10 @@ show_sidebar: true
 hide_footer: false
 ---
 
+Full list is also available at [Google Scholar](https://scholar.google.com/citations?user=vZfmKl4AAAAJ&hl=en), [CMU Scholar](https://scholars.cmu.edu/8810-chen-wang), [DBLP](https://dblp.org/pid/82/4206-33.html), and [arXiv](https://arxiv.org/a/wang_c_7.html).
+
+Alternatively, go to my [First Author Publication List](/papers).
+
 <style>
 .csl-block {
     font-size: 16px;
