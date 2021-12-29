@@ -1,5 +1,6 @@
 ---
 ---
+
 <div class="text-justify">
     {{reference}}
     <br />
@@ -15,7 +16,8 @@
             x.style.display = 'block';
         }
     }
-    </script>
+</script>
+
 {% if entry.abstract %}
 <button class="button3" onclick="toggle2{{entry.key  | replace: '-':'' | replace: ':':''}}()">abstract</button>
 {% endif %}
@@ -30,7 +32,8 @@
             x.style.display = 'block';
         }
     }
-    </script>
+</script>
+
 
 {% if entry.doi %}
 <a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input type='button' class='button1' value='doi'/></a>
@@ -39,15 +42,19 @@
 <a href="{{ entry.preprint }}"><input type='button' class='button2' value='preprint'/></a>
 {% endif %}
 {% if entry.url %}
-<a href='{{ entry.url | escape }}'><input type='button' class='button4' value='link'/></a>
+<a href='{{ entry.url | escape }}'><input type='button' class='button4' value='PDF'/></a>
 {% endif %}
 {% if entry.video %}
 <a href="{{ entry.video}}"><input type='button' class='button5' value='video'/></a>
 {% endif %}
-<!-- {% if entry.code %} -->
-<!-- <a href="{{ entry.code }}"><input type='button' class='button3' value='code'/></a> -->
-<!-- {% endif %} -->
+{% if entry.code %}
+<a href="{{ entry.code }}"><input type='button' class='button3' value='Code'/></a>
+{% endif %}
+{% if entry.addendum %}
+<a style="color:red;">{{ entry.addendum }}</a>
+{% endif %}
 </div>
 
 <div id="a{{entry.key}}" style="display:none"><pre>{{entry.bibtex}}</pre></div>
-<div id="b{{entry.key}}" style="display:none"><pre>{{entry.abstract}}</pre></div>
+<!-- <div id="b{{entry.key}}" style="display:none"><pre>{{entry.abstract}}</pre></div> -->
+

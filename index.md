@@ -1,11 +1,11 @@
 ---
-title: Chen Wang
+title: Chen Wang 
 subtitle: I research Spatial AI and Robotics
 layout: page
 show_sidebar: false
 hide_footer: false
 hero_height: is-medium
-hero_image: /img/background.jpeg
+hero_image: /img/chen-back.jpg
 hero_link: /research/
 hero_link_text: See My Research
 
