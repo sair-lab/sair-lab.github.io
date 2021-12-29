@@ -49,6 +49,7 @@
       </if>
     </choose>
   </macro>
+
   <macro name="issued">
     <choose>
       <if type="article-journal" match="any">
@@ -71,6 +72,7 @@
       </else>
     </choose>
   </macro>
+
   <macro name="author">
     <choose>
       <if type="webpage">
@@ -88,12 +90,14 @@
       </else>
     </choose>
   </macro>
+
   <macro name="editor">
     <names variable="editor">
       <name initialize-with=". " delimiter=", " and="text"/>
       <label form="short" prefix=", " text-case="capitalize-first" suffix="." strip-periods="true"/>
     </names>
   </macro>
+
   <macro name="locators">
     <group delimiter=", ">
       <text macro="edition"/>
@@ -111,6 +115,7 @@
       </group>
     </group>
   </macro>
+
   <macro name="title">
     <choose>
       <if type="bill book graphic legal_case legislation motion_picture song" match="any">
@@ -121,6 +126,7 @@
       </else>
     </choose>
   </macro>
+
   <macro name="publisher">
     <choose>
       <if type=" bill book chapter graphic legal_case legislation motion_picture paper-conference song" match="any">
@@ -135,6 +141,7 @@
       </else>
     </choose>
   </macro>
+
   <macro name="event">
     <choose>
       <if type="article-journal">
@@ -176,6 +183,7 @@
       </if>
     </choose>
   </macro>
+
   <macro name="access">
     <choose>
       <if type="webpage">
@@ -197,12 +205,14 @@
       </if>
     </choose>
   </macro>
+
   <macro name="page">
     <group>
       <label variable="page" form="short" suffix=". " strip-periods="true"/>
       <text variable="page"/>
     </group>
   </macro>
+
   <!-- Citation -->
   <citation collapse="citation-number">
     <sort>
@@ -212,6 +222,7 @@
       <text variable="citation-number"/>
     </layout>
   </citation>
+
   <!-- Bibliography -->
   <bibliography entry-spacing="0" second-field-align="flush">
     <layout suffix="">
@@ -221,55 +232,55 @@
       <choose>
         <!-- Specific Formats -->
         <if type="article-journal">
-	  <group display="block csl-content" delimiter="">
-	  <group display="block csl-title" delimiter="">
-            <text macro="title" suffix=". "/>
-	  </group>
-            <!-- Author(s) -->
-            <group display="block csl-author" delimiter="">
-     	      <text macro="author" prefix="By " suffix="."/>
-            </group>
-            <group display="block csl-event" delimiter=", ">
-              <text macro="event"/>
-              <text macro="locators"/>
-              <text macro="page"/>
-              <text macro="issued" suffix="."/>
+          <group display="block csl-content" delimiter="">
+          <group display="block csl-title" delimiter="">
+                  <text macro="title" suffix=". "/>
           </group>
+                  <!-- Author(s) -->
+                  <group display="block csl-author" delimiter="">
+                    <text macro="author" prefix="By " suffix="."/>
+                  </group>
+                  <group display="block csl-event" delimiter=", ">
+                    <text macro="event"/>
+                    <text macro="locators"/>
+                    <text macro="page"/>
+                    <text macro="issued" suffix="."/>
+                </group>
           </group>
         </if>
         <else-if type="paper-conference">
-	  <group display="block csl-content">
-            <group display="block csl-title" delimiter=" ">
-              <text macro="title"  suffix="."/>
-            </group> 
-            <!-- Author(s) -->
-            <group display="block csl-author" delimiter="">
-     	      <text macro="author" prefix="By " suffix="."/>
-            </group>
-            <group display="block csl-event" delimiter="">
-              <text macro="event"/>
-            <text macro="locators" suffix=", "/>
-            <text macro="page" prefix=", " suffix=", "/>
-            <text macro="issued" suffix="."/> 
-          </group>
-          </group>
+        <group display="block csl-content">
+                <group display="block csl-title" delimiter=" ">
+                  <text macro="title"  suffix="."/>
+                </group> 
+                <!-- Author(s) -->
+                <group display="block csl-author" delimiter="">
+                <text macro="author" prefix="By " suffix="."/>
+                </group>
+                <group display="block csl-event" delimiter="">
+                <text macro="event"/>
+                <text macro="locators" suffix=", "/>
+                <text macro="page" prefix=", " suffix=", "/>
+                <text macro="issued" suffix="."/> 
+              </group>
+        </group>
         </else-if>
         <else-if type="report">
-	  <group display="block csl-content">
-            <group display="block csl-title" delimiter="">
-              <text macro="title"  suffix="."/>
-            </group>
-            <group display="block csl-author" delimiter=" ">
-     	      <text macro="author" prefix="By " suffix="."/>
-            </group>
-            <text variable="genre"/>
-            <text macro="publisher"/>
-            <text macro="event" prefix="" suffix=","/>
-            <group display="block csl-author" delimiter=" ">
-              <text variable="issue" prefix="Technical Report #" suffix=", " form="numeric"/>
-              <text macro="issued"/>              
-	    </group>
-          </group>
+        <group display="block csl-content">
+                <group display="block csl-title" delimiter="">
+                  <text macro="title"  suffix="."/>
+                </group>
+                <group display="block csl-author" delimiter=" ">
+                <text macro="author" prefix="By " suffix="."/>
+                </group>
+                <text variable="genre"/>
+                <text macro="publisher"/>
+                <text macro="event" prefix="" suffix=","/>
+                <group display="block csl-author" delimiter=" ">
+                  <text variable="issue" prefix="Technical Report #" suffix=", " form="numeric"/>
+                  <text macro="issued"/>              
+                </group>
+        </group>
         </else-if>
         <else-if type="book">
           <group display="block csl-content" delimiter=" ">
@@ -369,4 +380,5 @@
       </choose>
     </layout>
   </bibliography>
+
 </style>

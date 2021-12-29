@@ -42,17 +42,16 @@
 {% if entry.url %}
 <a href='{{ entry.url | escape }}'><input type='button' class='button4' value='PDF'/></a>
 {% endif %}
-{% if entry.video %}
-<a href="{{ entry.video}}"><input type='button' class='button5' value='video'/></a>
-{% endif %}
 {% if entry.code %}
 <a href="{{ entry.code }}"><input type='button' class='button3' value='Code'/></a>
 {% endif %}
+{% if entry.video %}
+<a href="{{ entry.video}}"><input type='button' class='button5' value='Video'/></a>
+{% endif %}
 {% if entry.addendum %}
-<a style="color:red;">{{ entry.addendum }}</a>
+<b style="color:red;">{{ entry.addendum }}</b>
 {% endif %}
 </div>
 
 <div id="a{{entry.key}}" style="display:none"><pre>{{entry.bibtex}}</pre></div>
 <!-- <div id="b{{entry.key}}" style="display:none"><pre>{{entry.abstract}}</pre></div> -->
-
