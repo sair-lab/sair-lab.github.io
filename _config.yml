@@ -5,7 +5,7 @@ email: chenwang@dr.com
 description: >
   Researching, developing, and testing autonomous flying robots at Carnegie Mellon University
 baseurl:
-url: "https://chenwang.site"
+url: "https://wang-chen.github.io"
 permalink: pretty
 
 paginate: 5
