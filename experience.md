@@ -27,10 +27,6 @@ Robotics Institute, Carnegie Mellon University (CMU)
 
 May. 2019 - Apr. 2021
 
-<br>
-
-# Education
-
 #### Doctor of Philosophy
 
 Nanyang Technological University (NTU), Singapore
