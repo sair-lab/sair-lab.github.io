@@ -5,7 +5,8 @@ email: chenwang@dr.com
 description: >
   Researching, developing, and testing autonomous flying robots at Carnegie Mellon University
 baseurl:
-url: "https://wang-chen.github.io"
+domain: seeksword.github.io
+url: "https://seeksword.github.io"
 permalink: pretty
 
 paginate: 5
