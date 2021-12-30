@@ -2,7 +2,6 @@
 layout: page
 title: Best Paper Award
 subtitle: "International Conference on Advanced Robotics (ICAR)"
-# description: "International Conference on Advanced Robotics (ICAR)"
 categories: highlights
 author: "Chen Wang"
 published: true
@@ -25,12 +24,11 @@ Paper titled "Non-iterative SLAM" received the best paper award in robotic plann
     </figcaption>
 </figure>
 
-
 Existing SLAM methods often require iterative solutions to find data association.
 For example, they require gradient descent algorithm to perform bundle adjustment, require RANSAC and ICP to match two point clouds.
-However, they are all very computational expensive.
+However, all of them are computational expensive or sensitive to initialization.
 
-To solve this problem, we develop Non-iterative SLAM, which has a non-iterative solution.
+To solve this problem, we develop **Non-iterative SLAM**, which has a non-iterative solution.
 It is the first RGB-D-Inertial SLAM method that has a closed-from solution only with a complexity of O(N log N).
 
 Because of this, it is very computationally efficient. We can even perform real-time dense mapping on a credit card sized computing board.
@@ -43,7 +41,7 @@ Because of this, it is very computationally efficient. We can even perform real-
     </figcaption>
 </figure>
 
-To the best of our knowledge, it was the worlds’ first real-time dense mapping demo on such a small computer.
+To the best of our knowledge, it was the world’s first real-time dense mapping demo on such a small computer.
 It can provide centimeter level accuracy with an onboard low power processor on a flying robot.
 
 <figure>
@@ -53,7 +51,7 @@ It can provide centimeter level accuracy with an onboard low power processor on 
     </figcaption>
 </figure>
 
-The closed-form solution is based on our kernel cross-correlator (KCC), which is published in AAAI 2017.
+The closed-form solution is based on our **kernel cross-correlator** (KCC), which is published in AAAI 2017.
 KCC is robust to noises, thus the trajectory estimation is also smoother than other methods.
 
 <figure>
@@ -66,13 +64,15 @@ KCC is robust to noises, thus the trajectory estimation is also smoother than ot
 </figure>
 
 We also applied it to warehouse robots for high-precision localization only with ground textures.
-In the tests, it only produces 0.1% to 0.5 drift error if no loop closure is given.
+In the tests, it only produces 0.1% to 0.5% drift error if no loop closure is given.
 
-Theoretically, the closed-form solution is based on our paper titled "Kernel Cross-Correlsator", which has a closed-form solution in frequency domain. For more detailed information, please refer to our papers.
+Theoretically, the closed-form solution is based on our paper titled "Kernel Cross-Correlator", which has a closed-form solution in frequency domain. For more detailed information, please refer to our papers.
 
-### Related Resources
+### Related Papers
 
-Paper: [Non-iterative SLAM](https://arxiv.org/abs/1710.05502)
+Paper: [Non-iterative SLAM](https://arxiv.org/pdf/1701.05294)
+
+Paper: [Non-iterative RGB-D-inertial Odometry](https://arxiv.org/abs/1710.05502)
 
 Paper: [Kernel Cross-Correlator](https://arxiv.org/abs/1709.05936)
 
@@ -88,7 +88,7 @@ Paper: [Kernel Cross-Correlator](https://arxiv.org/abs/1709.05936)
     }
 
     @article{wang2017noniterative,
-     title={Noniterative RGB-D-inertial Odometry},
+     title={Non-iterative RGB-D-inertial Odometry},
      author={Wang, Chen and Hoang, Minh-Chung and Xie, Lihua and Yuan, Junsong},
      journal={arXiv preprint arXiv:1710.05502},
      year={2017},
