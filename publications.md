@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Publications
-subtitle: I am publishing papers on robot perception and machine learning.
+subtitle: I am publishing papers on robot perception and learning.
 hero_height: is-small
 show_sidebar: true
 hide_footer: false
