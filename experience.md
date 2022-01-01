@@ -1,13 +1,14 @@
 ---
-title: Experience
-hero_height: is-small
+# title: Experience
+hide_hero: true
 layout: product
 show_sidebar: false
 hide_footer: false
 remove_hero_title: true
-image: /img/team/chen.jpg
+image: /img/team/profile.jpg
 ---
-<br>
+
+# Experience
 
 #### Associate Editor
 
@@ -27,12 +28,13 @@ Robotics Institute, Carnegie Mellon University (CMU)
 
 May. 2019 - Apr. 2021
 
+# Education
+
 #### Doctor of Philosophy
 
 Nanyang Technological University (NTU), Singapore
 
 Aug. 2014 - Mar. 2019
-
 
 #### Bachelor of Engineering
 
