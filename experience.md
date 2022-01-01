@@ -5,7 +5,7 @@ layout: product
 show_sidebar: false
 hide_footer: false
 remove_hero_title: true
-image: /img/team/profile.jpg
+image: /img/team/chen.jpg
 ---
 
 # Experience
