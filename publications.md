@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Publications
-subtitle: I am publishing papers on robot perception and learning.
+subtitle: Most of my papers appear in top conferences/journals in robotics and CV.
 hero_height: is-small
 show_sidebar: true
 hide_footer: false
