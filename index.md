@@ -15,9 +15,9 @@ hero_link_text2: See My Publication
 
 # About Me
 
-I am a Project Scientist with the [Robotics Institute](https://www.ri.cmu.edu/) at [Carnegie Mellon University](https://www.cmu.edu/). My research goal is to achieve human-level spatial awareness on robot systems. I am particularly interested in robot perception, vision, and machine learning.
+I am a Project Scientist with the [Robotics Institute](https://www.ri.cmu.edu/) at [Carnegie Mellon University](https://www.cmu.edu/). My research goal is to achieve **human-level spatial awareness on robotic systems**. I am interested in all aspects of algorithm development, including creating **efficient algorithms**, proving their **theoretical properties**, distributing them to **open-source communities**, and validating them on **real-world robots**.
 
-I am also engaged in delivering simple and efficient [source code](https://github.com/wang-chen).
+I am particularly interested in **robotic perception, vision, and learning**, and I am also engaged in delivering simple and efficient [source code](https://github.com/wang-chen).
 
 # Highlights
 
