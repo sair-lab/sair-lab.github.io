@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Publications
-subtitle: Most of my papers appear in top conferences/journals in robotics and CV.
+subtitle: Most of my papers appear in top venues in robotics.
 hero_height: is-small
 show_sidebar: true
 hide_footer: false
@@ -35,6 +35,9 @@ Alternatively, go to my [First Author Publication List](/papers).
    list-style-type: none;
 }
 </style>
+# 2022
+{% bibliography --query @*[year=2022] %}
+
 # 2021
 {% bibliography --query @*[year=2021] %}
 
