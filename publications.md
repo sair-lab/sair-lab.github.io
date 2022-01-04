@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Publications
-subtitle: Most of my papers appear in top venues in robotics.
+subtitle: Most of my publications appear in top venues in robotics.
 hero_height: is-small
 show_sidebar: true
 hide_footer: false
