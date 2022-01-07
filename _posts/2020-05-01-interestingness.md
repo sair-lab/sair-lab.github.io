@@ -9,7 +9,7 @@ published: true
 sidebar:  false
 permalink: /interestingness/
 hero_height: is-small
-image: /img/posts/2020-05-01-interestingness/cover.png
+image: /img/posts/2020-05-01-interestingness/interestingness.gif
 ---
 
 
