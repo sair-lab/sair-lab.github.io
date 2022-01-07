@@ -37,7 +37,7 @@ Therefore, to construct a practical interestingness detection system and achieve
 <figure>
  <img src="/img/posts/2020-05-01-interestingness/image3crop.png" alt="interesting images" />
  <figcaption>
-    Detected interesting scenes 
+    Detected interesting scenes
  </figcaption>
 </figure>
 
@@ -54,33 +54,33 @@ In the [DARPA Subterranean (SubT) Challenge](https://www.darpa.mil/program/darpa
 Compared to human indicated interestingness the algorithm achieves an average 20% higher accuracy than the approach without online learning. The results indicate that our three-stage architecture of long-term, short-term, and online learning shows promise in representing interestingness for robots. 
 
 
-
-
 <figure>
- <img src="/img/posts/2020-05-01-interestingness/image1.png" alt="map" style="width:70%" />
+ <img src="/img/posts/2020-05-01-interestingness/interestingness-map.png" alt="map" style="width:80%" />
  <figcaption>
     The map created by Lidar during fully autonomous exploration
  </figcaption>
 </figure>
 
 
-
-
-
 ### Project Members
 * [Chen Wang](https://chenwang.site)
+* [Yuheng Qiu](http://theairlab.org/team/yuheng/)
 * [Wenshan Wang](http://www.wangwenshan.com/)
-* Yuheng Qiu
-* Yafei Hu
-* Sebastian Scherer
+* [Yafei Hu](http://theairlab.org/team/yafeih/)
+* [Seungchan Kim](http://theairlab.org/team/seungchan_kim/)
+* [Sebastian Scherer](http://theairlab.org/team/sebastian/)
 
 ### Publication
 
-* Chen Wang, Wenshan Wang, Yuheng Qiu, Yafei Hu, Sebastian Scherer, "Visual Memorability for Robotic Interestingness Prediction via Unsupervised Online Learning". European Conference on Computer Vision (ECCV), 2020 [[PDF](https://arxiv.org/abs/2005.08829)]
+* <b>Chen Wang</b>, Wenshan Wang, Yuheng Qiu, Yafei Hu, Sebastian Scherer, "Visual Memorability for Robotic Interestingness Prediction via Unsupervised Online Learning". European Conference on Computer Vision (ECCV), 2020. [[PDF](https://arxiv.org/abs/2005.08829)]
+
+* <b>Chen Wang</b>, Yuheng Qiu, Wenshan Wang, Yafei Hu, Seungchan Kim, Sebastian Scherer, "Unsupervised Online Learning for Robotic Interestingness with Visual Memory". IEEE Transactions on Robotics (T-RO), 2021. [[PDF](https://arxiv.org/abs/2111.09793)]
 
 ### Source Codes
 
    * Plain Python Package: [interestingness](https://github.com/wang-chen/interestingness)
+      * [TRO Branch](https://github.com/wang-chen/interestingness/tree/eccv)
+      * [ECCV Branch](https://github.com/wang-chen/interestingness/tree/tro)
 
    * ROS Package: [interestingness_ros](https://github.com/wang-chen/interestingness_ros)
 
