@@ -18,7 +18,7 @@ hide_footer: false
 
 I publish papers in both robotics and computer vision.
 
-Go to [Full Publication List](/publications) or Go to [Google Scholar](https://scholar.google.com/citations?user=vZfmKl4AAAAJ&hl=en), [CMU Scholar](https://scholars.cmu.edu/8810-chen-wang), [DBLP](https://dblp.org/pid/82/4206-33.html), and [arXiv](https://arxiv.org/a/wang_c_7.html).
+* [Full Publication List](/publications), [Google Scholar](https://scholar.google.com/citations?user=vZfmKl4AAAAJ&hl=en), [CMU Scholar](https://scholars.cmu.edu/8810-chen-wang), [DBLP](https://dblp.org/pid/82/4206-33.html), [arXiv](https://arxiv.org/a/wang_c_7.html), and [Air Series Articles](/airseries).
 
 <style>
 .csl-block {s
