@@ -81,7 +81,7 @@ A wide variety of topics in **robotics** are covered, including **localization**
     </figcaption>
 </figure>
 
-* **AirDOS: Dynamic object-aware SLAM (DOS) system**
+* **AirDOS: Dynamic Object-aware SLAM (DOS) system**
 
    * The first DOS system showing that camera pose estimation can be improved by incorporating dynamic articulated objects.
    * Establish 4-D dynamic object maps.
@@ -93,7 +93,7 @@ A wide variety of topics in **robotics** are covered, including **localization**
     </figcaption>
 </figure>
 
-* **AirLoop**
+* **AirLoop: Lifelong learning for Robots**
 
    * The first lifelong learning method for loop closure detection.
    * Model incremental improvement even after deployment.
