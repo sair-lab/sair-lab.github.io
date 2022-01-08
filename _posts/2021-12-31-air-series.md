@@ -6,7 +6,7 @@ categories: highlights
 author: "Chen Wang"
 published: true
 permalink: /airseries/
-image: /img/posts/highlights/AirDet-16x9.gif
+image: /img/posts/2021-12-31-air-series/AirDet-16x9.gif
 datatable: true
 hero_height: is-small
 title_image: None
