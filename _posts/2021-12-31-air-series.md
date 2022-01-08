@@ -15,9 +15,9 @@ show_sidebar: true
 hide_footer: false
 ---
 
-Air Series is a collection of articles **mentored by Chen Wang in the year of 2021**.
+**Air Series** is a collection of **five articles mentored by Chen Wang** in the year of 2021.
 
-It contains **five articles**, all of which are **first authored by Undergraduate or Master students**.
+All articles are **first authored by Undergraduate or Master students** and **second authored by Chen Wang**.
 
 A wide variety of topics in **robotics** are covered, including **localization**, **detection**, and **lifelong learning**.
 
@@ -119,6 +119,8 @@ A wide variety of topics in **robotics** are covered, including **localization**
     </figcaption>
 </figure>
 
+More information can be found at the [research page](/research). Some project pages will be released soon.
+
 ### First Author Information (When the work was done)
 
 * [Bowen Li](https://jaraxxus-me.github.io/)
@@ -130,7 +132,7 @@ A wide variety of topics in **robotics** are covered, including **localization**
    * Third year undergraduate at Indian Institute of Techonology Dhanbad.
 
 * [Dasong Gao](https://scholar.google.com/citations?user=_loctXsAAAAJ&hl=en)
-   * Master of Machine Learning at Carnegie Mellon University.
+   * Master student of Machine Learning at Carnegie Mellon University.
 
 * [Yuheng Qiu](https://scholar.google.com/citations?user=aEK45mEAAAAJ)
    * Undergraduate of Chinese University of Hong Kong.
