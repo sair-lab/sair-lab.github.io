@@ -13,12 +13,12 @@ Alternatively, go to my [First Author Publication List](/papers).
 
 <style>
 .csl-block {
-    font-size: 16px;
+    font-size: 15px;
 }
 .csl-title, .csl-author, .csl-event, .csl-editor, .csl-venue {
     display: block;
     position: relative;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .csl-title b {
