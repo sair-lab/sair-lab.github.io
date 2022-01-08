@@ -15,11 +15,12 @@ show_sidebar: true
 hide_footer: false
 ---
 
-**Air Series** is a collection of **five articles mentored by Chen Wang** in the year of 2021.
+**Air Series** is a collection of **articles mentored by Chen Wang**.
+
+A wide variety of topics in **robotics** are covered, including **localization**, **detection**, and **lifelong learning**.
 
 All articles are **first authored by Undergraduate or Master students** and **second authored by Chen Wang**.
 
-A wide variety of topics in **robotics** are covered, including **localization**, **detection**, and **lifelong learning**.
 
 <style>
 .csl-block {
@@ -93,7 +94,7 @@ A wide variety of topics in **robotics** are covered, including **localization**
     </figcaption>
 </figure>
 
-* **AirLoop: Lifelong learning for Robots**
+* **AirLoop: Lifelong Learning for Robots**
 
    * The first lifelong learning method for loop closure detection.
    * Model incremental improvement even after deployment.
@@ -107,9 +108,9 @@ A wide variety of topics in **robotics** are covered, including **localization**
 
 * **AirCode: Robust Object Encoding**
 
-   * The first deep point-based object encoding.
-   * It achieves the state-of-the-art performance for video object identification.
-   * Robust to severe occlusion, perceptual aliasing, viewpoint shift, deformation, and scale transform.
+   * The first deep point-based object encoding for single image.
+   * It achieves the state-of-the-art performance for object re-identification.
+   * Robust to viewpoint shift, object deformation, and scale transform.
 
 <figure>
     <img src="/img/posts/2021-10-06-aircode/object-matching1.gif" />
