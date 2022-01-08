@@ -119,7 +119,7 @@ A wide variety of topics in **robotics** are covered, including **localization**
     </figcaption>
 </figure>
 
-### First Authors Information (When the work was done)
+### First Author Information (When the work was done)
 
 * [Bowen Li](https://jaraxxus-me.github.io/)
    * RISS intern at Carnegie Mellon University.
@@ -138,4 +138,6 @@ A wide variety of topics in **robotics** are covered, including **localization**
 
 * Kuan Xu
    * Master Graduate of Harbin Institute of Technology, China.
-   * Engineer of Tencent and Geekplus.
+   * Engineer at Tencent and Geekplus.
+
+Congratulations to the above young researchers!
