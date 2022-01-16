@@ -46,7 +46,10 @@
 <a href="{{ entry.code }}"><input type='button' class='button3' value='Code'/></a>
 {% endif %}
 {% if entry.video %}
-<a href="{{ entry.video}}"><input type='button' class='button5' value='Video'/></a>
+<a href="{{ entry.video}}"><input type='button' class='button3' value='Video'/></a>
+{% endif %}
+{% if entry.addinfo %}
+<b style="color:gray;">{{ entry.addinfo }}</b>
 {% endif %}
 {% if entry.addendum %}
 <b style="color:red;">{{ entry.addendum }}</b>
