@@ -126,18 +126,20 @@ More information can be found at the [research page](/research). Some project pa
 
 * [Bowen Li](https://jaraxxus-me.github.io/)
    * RISS intern at Carnegie Mellon University.
-   * Third year undergraduate at Tongji University, China.
+   * Junior student at Tongji University, China.
+   * Now: Incoming PhD student of CMU RI
 
 * [Nikhil Varma Keetha](https://www.linkedin.com/in/nikhil-varma-keetha-612685193/)
    * RISS intern at Carnegie Mellon University.
-   * Third year undergraduate at Indian Institute of Techonology Dhanbad.
+   * Junior student at Indian Institute of Technology Dhanbad.
 
 * [Dasong Gao](https://scholar.google.com/citations?user=_loctXsAAAAJ&hl=en)
    * Master student of Machine Learning at Carnegie Mellon University.
+   * Now: Incoming PhD student of MIT EECS
 
 * [Yuheng Qiu](https://scholar.google.com/citations?user=aEK45mEAAAAJ)
    * Undergraduate of Chinese University of Hong Kong.
-   * Research Associate (Now: PhD student) at Carnegie Mellon University.
+   * Now: PhD student of CMU
 
 * Kuan Xu
    * Master Graduate of Harbin Institute of Technology, China.
