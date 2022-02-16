@@ -132,6 +132,7 @@ More information can be found at the [research page](/research). Some project pa
 * [Nikhil Varma Keetha](https://www.linkedin.com/in/nikhil-varma-keetha-612685193/)
    * RISS intern at Carnegie Mellon University.
    * Junior student at Indian Institute of Technology Dhanbad.
+   * Now: Incoming Master student of CMU RI.
 
 * [Dasong Gao](https://scholar.google.com/citations?user=_loctXsAAAAJ&hl=en)
    * Master student at Carnegie Mellon University.
