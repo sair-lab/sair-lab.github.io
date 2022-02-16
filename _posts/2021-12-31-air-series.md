@@ -21,31 +21,6 @@ A wide variety of topics in **robotics** are covered, including **localization**
 
 All articles are **first authored by Undergraduate or Master students** and **second authored by Chen Wang**.
 
-### First Author Information (When the work was done)
-
-* [Bowen Li](https://jaraxxus-me.github.io/)
-   * RISS intern at Carnegie Mellon University.
-   * Junior student at Tongji University, China.
-   * Now: Incoming PhD student of [CMU RI](https://www.ri.cmu.edu/).
-
-* [Nikhil Varma Keetha](https://www.linkedin.com/in/nikhil-varma-keetha-612685193/)
-   * RISS intern at Carnegie Mellon University.
-   * Junior student at Indian Institute of Technology Dhanbad.
-   * Now: Incoming Master student of [CMU RI](https://www.ri.cmu.edu/).
-
-* [Dasong Gao](https://scholar.google.com/citations?user=_loctXsAAAAJ&hl=en)
-   * Master student at Carnegie Mellon University.
-   * Now: Incoming PhD student of [MIT EECS](https://www.eecs.mit.edu/).
-
-* [Yuheng Qiu](https://scholar.google.com/citations?user=aEK45mEAAAAJ)
-   * Undergraduate of Chinese University of Hong Kong.
-   * Now: PhD student of [CMU ME](https://www.meche.engineering.cmu.edu/).
-
-* Kuan Xu
-   * Master Graduate of Harbin Institute of Technology, China.
-   * Engineer at Tencent and Geekplus.
-   * Now: Incoming PhD student of [NTU EEE](https://www.ntu.edu.sg/eee).
-
 
 <style>
 .csl-block {
@@ -76,6 +51,32 @@ All articles are **first authored by Undergraduate or Master students** and **se
 ## Air Series Articles
 
 {% bibliography --query @*[keywords=airseries] %}
+
+
+### First Author Information (When work was done)
+
+* [Bowen Li](https://jaraxxus-me.github.io/)
+   * RISS intern at Carnegie Mellon University.
+   * Junior student at Tongji University, China.
+   * Now: Incoming PhD student of [CMU RI](https://www.ri.cmu.edu/).
+
+* [Nikhil Varma Keetha](https://www.linkedin.com/in/nikhil-varma-keetha-612685193/)
+   * RISS intern at Carnegie Mellon University.
+   * Junior student at Indian Institute of Technology Dhanbad.
+   * Now: Incoming Master student of [CMU RI](https://www.ri.cmu.edu/).
+
+* [Dasong Gao](https://scholar.google.com/citations?user=_loctXsAAAAJ&hl=en)
+   * Master student at Carnegie Mellon University.
+   * Now: Incoming PhD student of [MIT EECS](https://www.eecs.mit.edu/).
+
+* [Yuheng Qiu](https://scholar.google.com/citations?user=aEK45mEAAAAJ)
+   * Undergraduate of Chinese University of Hong Kong.
+   * Now: PhD student of [CMU ME](https://www.meche.engineering.cmu.edu/).
+
+* Kuan Xu
+   * Master Graduate of Harbin Institute of Technology, China.
+   * Engineer at Tencent and Geekplus.
+   * Now: Incoming PhD student of [NTU EEE](https://www.ntu.edu.sg/eee).
 
 
 ### Contribution
