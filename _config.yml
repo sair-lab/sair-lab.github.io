@@ -5,7 +5,7 @@ email: chenwang@dr.com
 description: Chen Wang is a Project Scientist with the Robotics Institute at Carnegie Mellon University.
 baseurl:
 domain: chenwang.site
-url: "https://sairlab.org"
+url: "https://chenwang.site"
 permalink: pretty
 
 paginate: 5
