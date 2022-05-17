@@ -1,5 +1,5 @@
 ---
-# title: Experience
+title: Experience
 hide_hero: true
 layout: product
 show_sidebar: false
@@ -8,7 +8,13 @@ remove_hero_title: true
 image: /img/team/chen.jpg
 ---
 
-# Experience
+<style>
+p.small {
+  line-height: 0.05;
+}
+</style>
+
+<p class="small"><br></p>
 
 #### Associate Editor
 
