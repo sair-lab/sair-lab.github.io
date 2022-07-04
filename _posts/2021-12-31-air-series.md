@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Air Series Articles Prereleased
+title: Air Series Articles Released
 # subtitle: "Air Series is a collection of articles in robotics mentored by Dr. Chen Wang in 2021."
 categories: highlights
 author: "Chen Wang"
@@ -100,6 +100,7 @@ All articles are **first authored by Undergraduate or Master students** and **se
    * The first temporal object embedding method.
    * It achieves the state-of-the-art performance for video object identification.
    * Robust to severe occlusion, perceptual aliasing, viewpoint shift, deformation, and scale transform.
+   * [Project Page: https://chenwang.site/airobject](/airobject)
 
 <figure>
     <img src="/img/posts/2021-12-31-air-series/AirObject.gif" />
@@ -112,6 +113,7 @@ All articles are **first authored by Undergraduate or Master students** and **se
 
    * The first DOS system showing that camera pose estimation can be improved by incorporating dynamic articulated objects.
    * Establish 4-D dynamic object maps.
+   * [Project Page: https://chenwang.site/airdos](/airdos)
 
 <figure>
     <img src="/img/posts/2021-12-31-air-series/AirDOS.gif" />
@@ -124,6 +126,7 @@ All articles are **first authored by Undergraduate or Master students** and **se
 
    * The first lifelong learning method for loop closure detection.
    * Model incremental improvement even after deployment.
+   * [Project Page: https://chenwang.site/airloop](/airloop)
 
 <figure>
     <img src="/img/posts/2021-09-28-airloop/tartanair-ll.gif" />
@@ -137,6 +140,7 @@ All articles are **first authored by Undergraduate or Master students** and **se
    * The first deep point-based object encoding for single image.
    * It achieves the state-of-the-art performance for object re-identification.
    * Robust to viewpoint shift, object deformation, and scale transform.
+   * [Project Page: https://chenwang.site/aircode](/aircode)
 
 <figure>
     <img src="/img/posts/2021-10-06-aircode/object-matching1.gif" />
@@ -149,5 +153,3 @@ All articles are **first authored by Undergraduate or Master students** and **se
 Congratulations to the above young researchers!
 
 More information can be found at the [research page](/research).
-
-Some project pages will be released soon.
