@@ -9,3 +9,4 @@ _site
 vendor
 .vscode
 yarn.lock
+.jekyll-metadata

@@ -14,7 +14,7 @@ hide_footer: false
 ## Email
 [chenwang@dr.com](mailto:chenwang@dr.com) (Preferred)
 
-[chenwan3@andrew.cmu.edu](mailto:chenwan3@andrew.cmu.edu)
+[wangchen@cmu.edu](mailto:wangchen@cmu.edu)
 
 ## Cooperation
 
