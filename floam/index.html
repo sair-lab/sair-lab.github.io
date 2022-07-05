@@ -1,0 +1,577 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>F-LOAM: Fast LiDAR Odometry and Mapping - Chen Wang</title>
+    
+    <link rel="stylesheet" href="/assets/css/app.css">
+
+    <link rel="shortcut icon" type="image/ico" href="/img/favicon/favicon.ico" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#cc002b">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  
+
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>F-LOAM: Fast LiDAR Odometry and Mapping | Chen Wang</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="F-LOAM: Fast LiDAR Odometry and Mapping" />
+<meta name="author" content="Han Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Fast LOAM" />
+<meta property="og:description" content="Fast LOAM" />
+<link rel="canonical" href="https://sairlab.org/floam/" />
+<meta property="og:url" content="https://sairlab.org/floam/" />
+<meta property="og:site_name" content="Chen Wang" />
+<meta property="og:image" content="https://sairlab.org/img/posts/2021-09-18-floam/floam_kitti.gif" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-06-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://sairlab.org/img/posts/2021-09-18-floam/floam_kitti.gif" />
+<meta property="twitter:title" content="F-LOAM: Fast LiDAR Odometry and Mapping" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Han Wang"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://sairlab.org/floam/"},"description":"Fast LOAM","url":"https://sairlab.org/floam/","@type":"BlogPosting","image":"https://sairlab.org/img/posts/2021-09-18-floam/floam_kitti.gif","headline":"F-LOAM: Fast LiDAR Odometry and Mapping","dateModified":"2021-06-03T00:00:00+00:00","datePublished":"2021-06-03T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-84365303-1"></script>
+<script>
+  window['ga-disable-UA-84365303-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-84365303-1');
+  gtag('config', 'G-ERWFHDG4GX');
+</script><!-- head scripts --><!-- Added by Chen -->
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5ee902d30e78e50012567eb4&product=inline-follow-buttons&cms=sop' async='async'></script>
+
+    <!-- for mathjax support -->
+    
+
+</head>
+
+<body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item navbar-logo">
+                Chen Wang
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item ">Home</a>
+                
+                
+                    
+                    <a href="/experience/" class="navbar-item ">Experience</a>
+                    
+                
+                    
+                    <a href="/research/" class="navbar-item ">Research</a>
+                    
+                
+                    
+                    <a href="/publications/" class="navbar-item ">Publications</a>
+                    
+                
+                    
+                    <a href="/datasets/" class="navbar-item ">Datasets</a>
+                    
+                
+                    
+                    <a href="/contact/" class="navbar-item ">Contact</a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+  <section class="hero  
+        is-small 
+         is-bold is-primary" 
+        >
+    <div class="hero-body">
+        <div class="container">
+            
+                <p class="title is-2" style="color:white;">F-LOAM: Fast LiDAR Odometry and Mapping</p>
+                <p class="subtitle is-3" style="color:white;"></p>
+                <p class="subtitle is-3">
+            
+            
+            
+        </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .button.is-info {
+     background-color:#cc002b;
+     border-color:transparent;
+     color:#fff
+    }
+    .button.is-info.is-hovered {
+     background-color:#cc002b;
+     border-color:transparent;
+     color:#fff
+    }
+</style>
+  
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+
+                
+                <div class="column is-9">
+                      
+  <div style="text-align: center; display: block; margin-left:auto; margin-right:auto">
+    <img style="text" src="/img/posts/2021-09-18-floam/floam_kitti.gif" alt="F-LOAM: Fast LiDAR Odometry and Mapping" />
+</div>
+
+
+<!-- Figure out the relative link to the author -->
+
+
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+<div class="content">
+
+    <p><div style="font-size: 13px">Published: 
+		<time datetime="2021-06-03T00:00:00+00:00">Jun 3, 2021</time> by 
+		<div style="font-weight: bold; color: #3399ff; display: inline">
+		
+			Han Wang
+		
+		</div>
+	</div></p>
+
+    <!-- <h1>F-LOAM: Fast LiDAR Odometry and Mapping</h1> -->
+
+    <p>FLOAM was included in the <a href="https://discourse.ros.org/t/new-packages-for-noetic-2021-09-08/22213">ROS Noetic update</a>, which is now available!</p>
+
+<p>Simultaneous Localization and Mapping (SLAM) has wide robotic applications such as autonomous driving
+and unmanned aerial vehicles. Both computational efficiency and localization accuracy are of great importance to a good SLAM system.
+Existing works on LiDAR based SLAM often formulate the problem as two modules: scan-to-scan match and scan-to-map refinement, which are often solved by iterative calculation which are computationally expensive.
+In this work, we propose a general solution that aims to provide a computationally efficient and accurate framework for LiDAR based SLAM.</p>
+
+<figure>
+ <img src="/img/posts/2021-09-18-floam/floam_mapping.gif" alt="FLOAM Mapping" />
+ <figcaption>
+    Mapping with F-LOAM
+ </figcaption>
+</figure>
+
+<p>We adopt a non-iterative two-stage distortion compensation method to reduce the computational cost.
+For each scan input, the edge and planar features are extracted and matched to a local edge map and a local plane map separately, where the local smoothness is also considered for iterative pose optimization.</p>
+
+<!-- Thorough experiments are performed to evaluate its performance in challenging scenarios, including localization for a warehouse Automated Guided Vehicle (AGV) and a public dataset on autonomous driving.  -->
+
+<figure>
+ <img src="/img/posts/2021-09-18-floam/kitti_example.gif" alt="FLOAM Localization" />
+ <figcaption>
+    An example of Localization with FLOAM
+ </figcaption>
+</figure>
+
+<p>F-LOAM achieves a competitive localization accuracy with a processing rate of more than 10 Hz in the public dataset evaluation, which provides a good trade-off between performance and computational cost for practical applications.
+It is one of the most accurate and <a href="https://github.com/wh200720041/floam">fastest open-sourced SLAM systems</a> in KITTI dataset ranking.</p>
+
+<h2 id="performance">Performance</h2>
+
+<ul>
+  <li>Computational efficiency evaluation (based on KITTI dataset):</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dataset</th>
+      <th>ALOAM</th>
+      <th>FLOAM</th>
+      <th>Platform</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">KITTI</code></td>
+      <td>151ms</td>
+      <td><strong>59ms</strong></td>
+      <td>Intel® Core™ i7-8700 CPU @ 3.20GHz</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Localization error:</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dataset</th>
+      <th>ALOAM</th>
+      <th>FLOAM</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">KITTI sequence 00</code></td>
+      <td>0.55%</td>
+      <td><strong>0.51%</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">KITTI sequence 02</code></td>
+      <td>3.93%</td>
+      <td><strong>1.25%</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">KITTI sequence 05</code></td>
+      <td>1.28%</td>
+      <td><strong>0.93%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="video-wrapper"><iframe src="https://www.youtube.com/embed/QvXN5XhAYYw" frameborder="0" allowfullscreen=""></iframe></div>
+
+<h3 id="project-members">Project Members</h3>
+
+<ul>
+  <li><a href="https://wanghan.pro">Han Wang</a></li>
+  <li><a href="https://chenwang.site">Chen Wang</a></li>
+  <li><a href="https://scholar.google.com.sg/citations?user=Fmrv3J8AAAAJ&amp;hl=en">Lihua Xie</a></li>
+</ul>
+
+<h3 id="publication">Publication</h3>
+
+<ul>
+  <li>Han Wang, Chen Wang, Lihua Xie, “F-LOAM: Fast LiDAR Odometry And Mapping”. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2021. [<a href="https://arxiv.org/abs/2107.00822">PDF</a>]</li>
+</ul>
+
+<h3 id="source-codes">Source Codes</h3>
+
+<ul>
+  <li>
+    <p>ROS Package: <a href="https://github.com/wh200720041/floam">floam</a>.</p>
+  </li>
+  <li>
+    <p>FLOAM was included in <a href="https://discourse.ros.org/t/new-packages-for-noetic-2021-09-08/22213">ROS Noetic</a>.</p>
+  </li>
+</ul>
+
+<h3 id="citation">Citation</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{wang2021f,
+ title = {F-LOAM: Fast LiDAR Odometry And Mapping},
+ author = {Wang, Han and Wang, Chen and Chen, Chun-Lin and Xie, Lihua},
+ booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+ year = {2021},
+}
+</code></pre></div></div>
+
+</div>
+
+<div class="tags">
+    
+</div>
+
+
+
+                </div>
+                
+                <div class="column is-3-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<!-- <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <a href="/airobject/">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2022-03-15-airobject/obj_1_org.gif" alt="AirObject: A Temporally Evolving Graph Embedding for Object Identification" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">AirObject: A Temporally Evolving Graph Embedding for Object Identification</div>
+            
+            <p>               Video Object Identification    </p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Mar 15, 2022</p>
+    </footer>
+</div>
+</a>
+
+    </div>
+    
+    <div class="column is-12">
+        <a href="/lgl/">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2022-03-05-lgl/matching.jpg" alt="Lifelong Graph Learning" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">Lifelong Graph Learning</div>
+            
+            <p>Graph neural networks (GNNs) are powerful models for many graph-structured tasks. Existing models...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Mar 5, 2022</p>
+    </footer>
+</div>
+</a>
+
+    </div>
+    
+    <div class="column is-12">
+        <a href="/airdos">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2022-02-06-airdos/AirDOS-title.gif" alt="AirDOS: Dynamic SLAM benefits from Articulated Objects" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">AirDOS: Dynamic SLAM benefits from Articulated Objects</div>
+            
+            <p>Dynamic Object-aware SLAM (DOS) exploits object-level information to enable robust motion estimat...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 6, 2022</p>
+    </footer>
+</div>
+</a>
+
+    </div>
+    
+</div> -->
+
+<a class="twitter-timeline"
+data-tweet-limit="8"
+data-theme="light"
+width="100%"
+href="https://twitter.com/DrChenWang">
+News from Twitter @DrChenWang<br>You need VPN if you see this.
+</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+     <style>
+  #blocks {
+      width:100%;
+      height:60px;
+      margin:0 auto;
+      /* background-color: #ffe; */
+  }
+  #block1 {
+      height:33.33%;
+      width:30%;
+      /* background: red; */
+      float: left;
+  }
+  #block2 {
+      height:33.33%;
+      width:40%;
+      /* background: yellow; */
+      float: left;
+  }
+  #block3 {
+      height:33.33%;
+      width:30%;
+      /* background: green; */
+      float: right;
+  }
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+<footer class="footer">
+    <div class="container">
+        <!-- 
+        <div class="columns is-multiline">
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/" class="link">Home</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/blog/" class="link">Blog</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/products/" class="link">Products</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/privacy-policy/" class="link">Privacy Policy</a>
+                </div>
+            </div>
+            
+        </div>
+         -->
+        <div id="blocks">
+          <div id="block1"><img src="/img/logos/cmu-wordmark-stacked-r.png" alt="AirLab Logo" style="height:60px;"></div>
+          <div id="block2">
+            <center>
+
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-github"></i>
+              </a> -->
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook"</i>
+              </a> -->
+              <!-- <a class="button" itemprop="facebook" href="https://www.facebook.com/airlabcmu/" target="_blank">
+                <i class="fab fa-facebook fa-lg" style="height:100%;"></i>
+              </a> -->
+              <a class="button" itemprop="github" href="https://scholar.google.com/citations?user=vZfmKl4AAAAJ&hl=en" target="_blank">
+                <i class="ai ai-google-scholar ai-2x"></i>
+              </a>
+              <a class="button" itemprop="github" href="https://github.com/wang-chen" target="_blank">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              <a class="button" itemprop="linkedin" href="https://www.linkedin.com/in/wang-chen" target="_blank">
+                <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+              <a class="button" itemprop="twitter" href="https://www.twitter.com/DrChenWang/" target="_blank">
+                <i class="fab fa-twitter fa-lg"></i>
+              </a>
+              <!-- <a class="button" itemprop="medium" href="https://medium.com/airlabcmu" target="_blank">
+                <i class="fab fa-medium fa-lg"></i>
+              </a> -->
+              <a class="button" itemprop="youtube" href="https://www.youtube.com/channel/UCA-y9bZJsV9JAHQ9VnRBplg/videos" target="_blank">
+                <i class="fab fa-youtube fa-lg"></i>
+              </a>
+              <!-- <a class="button" itemprop="bitbucket" href="https://bitbucket.org/castacks/" target="_blank"> -->
+                <!-- <i class="fab fa-bitbucket fa-lg"></i> -->
+              <!-- </a> -->
+              <br>
+              <br>
+              <!-- <p class="">&copy; 2021 | Built using the <a href="https://github.com/chrisrhymes/bulma-clean-theme">Bulma Clean Theme</a></p> -->
+            </center>
+          </div>
+          <div id="block3"><img src="/img/logos/RI_small.jpeg" alt="RI Logo" style="float:right;height:60px;"></div>
+        </div>
+        <!-- <div>
+          <a href="" class="button is-large"><div class="icon"><i class="fab fa-facebook"</i></div></a>
+        </div> -->
+        <!-- <div class="content is-small has-text-centered">
+            <p class="">© 2020</p>
+        </div> -->
+    </div>
+
+
+</footer>
+ 
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+
+</html>
